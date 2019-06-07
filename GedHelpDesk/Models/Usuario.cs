@@ -11,5 +11,6 @@ namespace GedHelpDesk.Models
         public string Nome { get; set; }
         public string Email { get; set; }
         public int Senha { get; set; }
+        public ICollection<Chamados> Chamados { get; set; } = new List<Chamados>();
     }
 }
