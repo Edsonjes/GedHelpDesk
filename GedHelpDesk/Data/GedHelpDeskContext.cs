@@ -13,6 +13,7 @@ namespace GedHelpDesk.Models
         {
         }
 
-        public DbSet<GedHelpDesk.Models.Usuario> Usuario { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Chamados> Chamados { get; set; }
     }
 }

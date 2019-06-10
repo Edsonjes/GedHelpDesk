@@ -10,6 +10,7 @@ namespace GedHelpDesk.Models.Enums
         pedente = 0,
         EmAtendimento = 1,
         Cancelado = 2,
+        Concluido = 3
 
     }
 }
