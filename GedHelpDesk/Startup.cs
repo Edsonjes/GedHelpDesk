@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using GedHelpDesk.Models;
+using GedHelpDesk.Services;
 
 namespace GedHelpDesk
 {
@@ -38,6 +39,8 @@ namespace GedHelpDesk
 
             services.AddDbContext<GedHelpDeskContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("GedHelpDeskContext"),builder => builder.MigrationsAssembly("GedHelpDesk")));
+
+            services.AddScoped<ChamadosService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
