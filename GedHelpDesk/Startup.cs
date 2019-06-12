@@ -65,7 +65,7 @@ namespace GedHelpDesk
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Chamados}/{action=Index}/{id?}");
             });
         }
     }

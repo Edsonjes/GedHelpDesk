@@ -19,5 +19,12 @@ namespace GedHelpDesk.Controllers
             var listaChamados =  _ChamadoService.FidnAll();
             return View(listaChamados);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
+
+
 }

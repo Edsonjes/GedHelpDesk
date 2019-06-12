@@ -7,3 +7,45 @@
 
 <p>Lista Chamados</p>
 
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="success">
+            <th>
+                @Html.DisplayNameFor(Model => Model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Status)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var chamado in Model)
+        {
+        <td>
+            @Html.DisplayFor(chamadoItem => chamado.Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(chamadoItem => chamado.Hora)
+        </td>
+        <td>
+            @Html.DisplayFor(chamadoItem => chamado.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(chamadoItem => chamado.Status)
+        </td>
+        <th></th>
+        <td>
+            <a asp-action="Edit" asp-route-id="@chamado.Id">Editar</a>
+            <a asp-action="Details" asp-route-id="@chamado.Id">Detalhes</a>
+            <a asp-action="Delete" asp-route-id="@chamado.Id">Deletar</a>
+        </td>
+    }
+        </tbody>
+    </table>
