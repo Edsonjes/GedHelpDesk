@@ -14,12 +14,15 @@ namespace GedHelpDesk.Models
         public DateTime Data { get; set; }
         public ChamadoStatus Status { get; set; }
         public Usuario Usuario { get; set; }
+        public string Ramal { get; set; }
+        public string Setor { get; set; }
+       public string Titulo { get; set; }
 
         public Chamados()
         {
         }
 
-        public Chamados(int id, string descricao, DateTime hora, DateTime data, ChamadoStatus status, Usuario usuario)
+        public Chamados(int id, string descricao, DateTime hora, DateTime data, ChamadoStatus status, Usuario usuario, string ramal, string setor, string titulo)
         {
             Id = id;
             Descricao = descricao;
@@ -27,6 +30,9 @@ namespace GedHelpDesk.Models
             Data = data;
             Status = status;
             Usuario = usuario;
+            Ramal = ramal;
+            Setor = setor;
+            Titulo = titulo;
         }
 
        

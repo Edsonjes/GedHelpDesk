@@ -18,6 +18,14 @@ namespace GedHelpDesk.Services
         public List<Chamados> FidnAll()
         {
             return _context.Chamados.ToList();
+
         }
+        public void Insert (Chamados cham)
+        {
+            _context.Add(cham);
+            _context.SaveChanges();
+        }
+
+
     }
 }

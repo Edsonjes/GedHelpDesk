@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GedHelpDesk.Services;
+using GedHelpDesk.Models;
 
 namespace GedHelpDesk.Controllers
 {
@@ -23,6 +24,13 @@ namespace GedHelpDesk.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Chamados chamados)
+        {
+            _ChamadoService.Insert(chamados);
+            return RedirectToAction(nameof(Index));
         }
     }
 

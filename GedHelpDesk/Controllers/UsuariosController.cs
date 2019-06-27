@@ -148,5 +148,7 @@ namespace GedHelpDesk.Controllers
         {
             return _context.Usuario.Any(e => e.Id == id);
         }
-    }
+
+
+    }  
 }
